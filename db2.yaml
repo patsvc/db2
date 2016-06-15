@@ -161,7 +161,7 @@ parameter_groups:
     - { label: 'DB2 Database Parameters', parameters: [instanceowner_name, fenced_name, database_name, database_datamountpoint, database_codeset, database_territory, database_collate, database_pagesize] }
     - { label: 'Host Name Parameters', parameters: [hostname_db2] }
     - { label: 'Image Parameters', parameters: [flavor, key_name, availability_zone, image_id, virtuser_password, root_password, sw_repo_root] }
-    - { label: 'Salt Deployment', parameters: [salt_master_address, salt_api_token] }
+    - { label: 'Hidden Parameters', parameters: [salt_master_address, salt_api_token] }
     - { label: 'Network Parameters', parameters: [network-id__for__patterns-service-dev-net, subnet_id_46fcd6d7-017e-437b-9921-d7fb9f76a7f2, public_network_id, security_group] }
 
 resources:
