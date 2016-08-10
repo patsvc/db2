@@ -247,14 +247,13 @@ resources:
             roles:
               - $ROLES_1
             EOF
-            if [ "$ZERON" == true ]; then
+            if [ "$ZERON" == True ]; then
               echo "  - zeron" >> /etc/salt/grains
             fi
             cat >> /etc/salt/grains << EOF
             stack:
               $STACK_ID
             EOF
-            echo "zeron value: $ZERON" >> /tmp/zeronvalue
             sleep 30
             service salt-minion stop
             sleep 15
