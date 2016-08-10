@@ -77,10 +77,12 @@ parameters:
     type: string
 
   zeron_enabled:
-    type: boolean
+    type: string
     description: Life Cycle Management component gets added to each VM which helps provide web user interface to life cycle management of the stack.
     label: Enable life cycle management
-    default: False
+    default: false
+    constraints:
+      - allowed_values: [false, true]
         
 ############################
 # Salt Specific Parameters
