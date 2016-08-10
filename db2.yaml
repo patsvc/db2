@@ -77,12 +77,10 @@ parameters:
     type: string
 
   zeron_enabled:
-    type: string
+    type: boolean
     description: Life Cycle Management component gets added to each VM which helps provide web user interface to life cycle management of the stack.
     label: Enable life cycle management
-    default: false
-    constraints:
-    - allowed_values: [true,false]
+    default: False
         
 ############################
 # Salt Specific Parameters
@@ -254,6 +252,7 @@ resources:
             stack:
               $STACK_ID
             EOF
+            echo "zeron value: $ZERON" >> /tmp/zeronvalue
             sleep 30
             service salt-minion stop
             sleep 15
